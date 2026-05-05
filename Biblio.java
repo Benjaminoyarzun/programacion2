@@ -23,7 +23,10 @@ recorrer la lista de libros y agregar aquellos que coincidan con el criterio (t√
  */
 
 
-//NOTA PERSONAL: faltaria separar los inputs(hacerlos derecho en el main) y funcionalizar un menu de seleccion
+//NOTA PERSONAL: faltaria 
+// separar los inputs(hacerlos derecho en el main) y 
+// funcionalizar un menu de seleccion
+// checkear tipos
 package isaui;
 
 import java.util.ArrayList;
@@ -50,13 +53,14 @@ public class Biblio {
         Menu.mostrarMenu();
         System.out.print("Ingrese su opcion: ");
 
-        opcion = sc.nextInt();
+        opcion = Integer.parseInt(sc.nextLine());
+
 
         switch (opcion) {
 
             case 1:
 
-                biblio.registrarLibro();
+                biblio.registrarLibro(sc);
 
                 break;
 
@@ -132,8 +136,7 @@ class Usuario {
 class Biblioteca {
     ArrayList<Libro> libros = new ArrayList<>();
 
-    void registrarLibro() {
-        Scanner sc = new Scanner(System.in);
+    void registrarLibro(Scanner sc) {
         Libro libro = new Libro();
         System.out.println("INGRESAR NUEVO LIBRO");
         System.out.print("Titulo: ");
@@ -172,6 +175,7 @@ class Biblioteca {
             Libro libro = libros.get(i);
 
             boolean coincide = false;
+
 
             if (criterio.equalsIgnoreCase("titulo")) {
 
