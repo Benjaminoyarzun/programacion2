@@ -2,6 +2,10 @@ import java.util.ArrayList;
 
 public class Gestor {
     public static void main(String[] args) {
+
+        
+        
+        
         
     }
     
@@ -30,5 +34,14 @@ public class Gestor {
     ArrayList<Tarea> tareasProyecto = new ArrayList<>();
     ArrayList<miembroEquipo> miembrosProyecto = new ArrayList<>();
 
+
+
+    void checkearTareas(){
+        for (Tarea tarea : tareasProyecto) {
+            System.out.printf("d% - d%",tarea.nombre,tarea.estado);
+
+            
+        }
+    }
 
 }
