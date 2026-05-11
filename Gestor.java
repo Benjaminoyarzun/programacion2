@@ -1,8 +1,22 @@
+//NOTA: faltaria ponerle menu, y revisar que la tarea asignada a un miembro formara parte previamente del proyecto (con agregarTarea())
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Gestor {
     public static void main(String[] args) {
+        System.out.println("GESTOR DE TAREAS");
+        Proyecto proyecto=new Proyecto();
+        miembroEquipo miembro1=new miembroEquipo();
+        miembroEquipo miembro2=new miembroEquipo();
+        proyecto.miembrosProyecto.add(miembro1);
+        miembro1.nombre="Juan";
+        miembro1.rol= "Frontend Dev";
+        
+        proyecto.miembrosProyecto.add(miembro2);
+        miembro2.nombre="Ana";
+        miembro2.rol="Backend Dev";
+        proyecto.asignarTarea(null);
 
     }
 
@@ -65,7 +79,7 @@ class Proyecto {
 
     void checkearTareas() {
         for (Tarea tarea : tareasProyecto) {
-            System.out.printf("s% - s%", tarea.nombre, tarea.estado);
+            System.out.printf("%s - %s", tarea.nombre, tarea.estado);
 
         }
     }

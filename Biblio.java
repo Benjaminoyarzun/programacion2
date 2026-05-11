@@ -27,7 +27,7 @@ recorrer la lista de libros y agregar aquellos que coincidan con el criterio (t√
 // separar los inputs(hacerlos derecho en el main) y 
 // funcionalizar un menu de seleccion
 // checkear tipos
-package isaui;
+//package isaui;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -81,7 +81,7 @@ public class Biblio {
 
             case 3:
 
-                biblio.prestarLibro(usuario1);
+                biblio.prestarLibro(usuario1, sc);
 
                 break;
 
@@ -197,9 +197,7 @@ class Biblioteca {
         return resultados;
     }
 
-void prestarLibro(Usuario usuario) {
-
-    Scanner sc = new Scanner(System.in);
+void prestarLibro(Usuario usuario, Scanner sc) {
 
     boolean prestado = false;
 

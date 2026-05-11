@@ -11,6 +11,7 @@ import java.util.Scanner;
 
 public class Trabajo2 {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         Candidato candidato1 = new Candidato();
         candidato1.nombre = "Jemba";
         candidato1.partido = "Mainusaurios";
@@ -27,7 +28,7 @@ public class Trabajo2 {
         eleccion.candidatos.add(candidato1);
         eleccion.candidatos.add(candidato2);
         // eleccion.mostrarCandidato();
-        eleccion.emitirVoto(votante1);
+        eleccion.emitirVoto(votante1, sc);
         eleccion.mostrarGanador();
 
     }
@@ -55,9 +56,7 @@ class Eleccion {
     // }
     // }
 
-    void emitirVoto(Votante votante) {
-
-        Scanner sc = new Scanner(System.in);
+    void emitirVoto(Votante votante, Scanner sc) {
 
         int opcion = 0;
 
