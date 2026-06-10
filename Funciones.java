@@ -34,15 +34,11 @@ Crear un método sin argumentos ni retorno que imprima un menú con varias opcio
 
 */
 
-
-
-
-
-
+import java.util.Arrays;
 
 public class Funciones {
     public static void main(String[] args) {
-        NivelUno.mostrarSaludo();
+/*         NivelUno.mostrarSaludo();
 
         NivelUno.saludar("Benjamin");
 
@@ -86,10 +82,14 @@ public class Funciones {
     System.out.println(encontrado);
     String[] listaStrings= {"Hola", "Chau", "Jijo", "Hola", "Hola"};
     int numeroOcurrencias=NivelTres.contarOcurrencias(listaStrings, "Hola");
-    System.out.println(numeroOcurrencias);
-    int[] datos = {1,2,3,4};
+    System.out.println(numeroOcurrencias); */
+    int[] datosB = {1,2,3,4};
 
-    NivelCuatro.formatearArray(datos);
+    NivelCuatro.formatearArray(datosB);
+
+    int[] numeros= {5,6,7,8};
+    int[] arrayInvertido= NivelCuatro.invertirArray(numeros);
+    System.out.println(Arrays.toString(arrayInvertido));
 }
 
 }
@@ -294,4 +294,15 @@ class NivelCuatro{
         System.out.println(resultado);
     }
 
+    static int[] invertirArray(int[] numeros) {
+
+        int[] invertido = new int[numeros.length];
+
+        for (int i = 0; i < numeros.length; i++) {
+
+            invertido[i] = numeros[numeros.length - 1 - i];
+        }
+
+        return invertido;
+    }
 }
