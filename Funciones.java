@@ -38,7 +38,7 @@ import java.util.Arrays;
 
 public class Funciones {
     public static void main(String[] args) {
-/*         NivelUno.mostrarSaludo();
+        NivelUno.mostrarSaludo();
 
         NivelUno.saludar("Benjamin");
 
@@ -82,7 +82,7 @@ public class Funciones {
     System.out.println(encontrado);
     String[] listaStrings= {"Hola", "Chau", "Jijo", "Hola", "Hola"};
     int numeroOcurrencias=NivelTres.contarOcurrencias(listaStrings, "Hola");
-    System.out.println(numeroOcurrencias); */
+    System.out.println(numeroOcurrencias); 
     int[] datosB = {1,2,3,4};
 
     NivelCuatro.formatearArray(datosB);
@@ -90,6 +90,10 @@ public class Funciones {
     int[] numeros= {5,6,7,8};
     int[] arrayInvertido= NivelCuatro.invertirArray(numeros);
     System.out.println(Arrays.toString(arrayInvertido));
+
+    int[] notas = {1,10,4,8};
+    String[] nombres= {"Juan","Ana","Pedro","Benjamin"};
+    System.out.println(NivelCuatro.sacarMejor(notas, nombres));
 }
 
 }
@@ -304,5 +308,17 @@ class NivelCuatro{
         }
 
         return invertido;
+    }
+
+    static String sacarMejor (int[] notas, String[] nombres){
+        int indexMejor=0;
+        for (int i = 0; i < notas.length; i++) {  
+            if (notas[i]>notas[indexMejor]){
+                indexMejor=i;
+
+            }
+            
+        }
+        return nombres[indexMejor];
     }
 }
