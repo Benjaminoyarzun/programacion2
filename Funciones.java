@@ -1,39 +1,3 @@
-/* 🔹 Nivel 1 – Fundamentos de métodos (sin arrays)
-
-
-1. Mostrar mensaje fijo
-
-
-Crear un método llamado mostrarSaludo() que imprima “Hola, mundo”.
-
-
-2. Saludo personalizado
-
-
-Crear un método llamado saludar(String nombre) que reciba un nombre como
-parámetro e imprima un saludo.
-
-
-3. Área de un rectángulo
-
-
-Crear un método que reciba dos argumentos (base, altura) y devuelva el área del
-rectángulo.
-
-
-4. Convertir a mayúsculas
-
-
-Crear un método que reciba una cadena de texto y devuelva esa cadena en mayúsculas.
-
-
-5. Mostrar menú
-
-
-Crear un método sin argumentos ni retorno que imprima un menú con varias opciones.
-
-*/
-
 import java.util.Arrays;
 
 public class Funciones {
@@ -42,9 +6,7 @@ public class Funciones {
 
         NivelUno.saludar("Benjamin");
 
-        double area = NivelUno.calcularArea(
-                2.0,
-                4.0);
+        double area = NivelUno.calcularArea(2.0, 4.0);
 
         System.out.printf(
                 "El area del rectangulo es %.2f%n",
@@ -53,8 +15,7 @@ public class Funciones {
         String mayusculas = NivelUno.devolverMayusculas(
                 "hola mundo");
 
-        System.out.println(
-                mayusculas);
+        System.out.println(mayusculas);
 
         NivelUno.mostrarMenu(); 
         boolean resultadoParidad= NivelDos.esPar(9);
@@ -138,29 +99,6 @@ class NivelUno {
     }
 }
 
-/* 🔹 Nivel 2 – Métodos con retorno y lógica
-
-
-6. Número par o impar
-
-
-Crear un método esPar(int numero) que devuelva true si el número es par, y
-false si es impar.
-
-
-7. Calcular el cuadrado de un número
-
-
-Crear un método que reciba un entero y devuelva su cuadrado.
-
-
-8. Factorial recursivo
-
-
-Crear un método recursivo que calcule el factorial de un número.
-
- */
-
 
 class NivelDos {
 
@@ -182,34 +120,6 @@ class NivelDos {
     return numero * calcularFactorial(numero - 1);
     }
 }
-/* 🔹 Nivel 3 – Métodos con varargs y arrays
-
-
-9. Sumar múltiples números (varargs)
-
-
-Crear un método sumarNumeros(int... numeros) que reciba una cantidad
-indefinida de enteros y devuelva la suma.
-
-
-10. Promedio de un array
-
-
-Crear un método que reciba un array de double y retorne el promedio.
-
-
-11. Buscar valor en array
-
-
-Crear un método que reciba un array de int y un número a buscar, y devuelva true si el número está presente.
-
-
-
-12. Contar ocurrencias
-
-
-Crear un método que reciba un array de String y un string clave, y devuelva cuántas veces aparece.
- */
 
 class NivelTres{
     static int sumarNumero(int...numeros){
@@ -254,28 +164,6 @@ class NivelTres{
     }
 
 }
-
-/* 🔹 Nivel 4 – Métodos combinados y más complejos
-
-
-13. Imprimir array de forma formateada
-
-
-Crear un método que reciba un array de enteros y los imprima entre corchetes, separados por comas.
-
-
-14. Invertir array
-
-
-Crear un método que reciba un array de enteros y devuelva otro array con los valores en orden inverso.
-
-
-15. Estudiante con mejor nota
-
-
-Crear un método que reciba dos arrays: uno con nombres de estudiantes y otro con sus notas, y devuelva el nombre del estudiante con la mejor nota.
- */
-
 
 
 class NivelCuatro{
